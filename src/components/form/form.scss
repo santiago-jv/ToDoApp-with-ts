@@ -1,0 +1,84 @@
+@use '../../constants.scss';
+
+.form-container{
+    background-color:constants.$bg-secondary;
+    width:90%;
+    max-width:400px;
+    padding:2rem 0;
+    margin-bottom: 2rem;
+    height:fit-content;
+    border-radius: .4rem;
+    form{
+        width:90%;
+        margin:auto;
+    }
+    .form-title{
+        font-weight: normal;
+    }
+    .form-group{
+        margin:1rem 0;
+        width:100%;
+    }
+
+    .form-group:nth-child(-n + 3) label{
+        display:block;
+        width:fit-content;
+        font-size: 1.1rem;
+        margin-bottom: .4rem;
+    }
+    .done-control{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items:center;
+        
+    }
+
+    .done-control label{
+        margin-left: .5rem;
+    }
+
+    .done-control input {
+        width: 15px;
+        height: 15px;
+    }
+    @mixin inputCommons() {
+        outline:none;
+        border:2px solid constants.$bg-header;
+        background-color:transparent;
+        color:constants.$text-primary-color;
+        width:90%;
+        font-size: 1.05rem;
+        border-radius: .5rem;
+        padding:.3rem 0 .3rem .4rem;
+    }
+    .form-group input[type="text"] {
+        @include inputCommons;
+        height:30px;
+    
+    }
+    .form-group textarea {
+        @include inputCommons;
+        height:100px;
+        font-family: 'Ubuntu', sans-serif;
+        resize: none; 
+    
+    }
+
+    form .button {
+        padding:.4rem 1.5rem;
+        font-weight: bold;
+        background-color: constants.$bg-header;
+        color:constants.$text-primary-color;
+        border-radius: .7rem;
+        font-size: 1.05rem;
+
+    }
+    .error-message {
+        margin:1rem 0;
+    }
+    .error-message p{
+        color:rgb(212, 78, 78);
+    }
+}
+

@@ -1,0 +1,23 @@
+@use '../../constants.scss';
+
+
+header{
+    background:constants.$bg-header;
+    height: 4rem;
+    
+    .header-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height:100%;
+        margin:auto;
+    }
+
+    .header-title{
+        font-style: italic;
+        color:constants.$text-primary-color;
+    }
+    
+}
+

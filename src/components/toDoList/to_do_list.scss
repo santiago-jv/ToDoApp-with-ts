@@ -1,0 +1,35 @@
+@use '../../constants.scss';
+
+.todo-list-container{
+    background-color:constants.$bg-secondary;
+    width:90%;
+    max-width: 750px;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: center;
+    padding:2rem 0;
+    margin-bottom: 2rem;
+
+}
+table{
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    height:fit-content;
+    border: 1px solid #fff;
+}
+
+ tr{
+   border-bottom: 2px solid #fff;
+}
+
+td {
+    padding:.5rem 1rem;
+    vertical-align:middle;
+}
+tbody{
+    vertical-align:top;
+}
+
+td{
+    text-align: center;
+}
