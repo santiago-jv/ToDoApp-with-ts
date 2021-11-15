@@ -1,3 +1,3 @@
 ## Description
 
-#### A basic application to start implementing typescript and sass in react js
+#### A basic application to start implementing Typescript and Sass in React js
