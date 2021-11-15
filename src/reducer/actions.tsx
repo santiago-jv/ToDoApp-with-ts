@@ -20,7 +20,14 @@ const updateData = (state: StateInterface,payload:any ):StateInterface => {
 
     return list;
 }
+const deleteToDo = (state: StateInterface,payload:any ):StateInterface => {
+    const newToDoList = state.toDoList.filter(toDo => toDo.id !== payload.id);
+    const list ={...state,  toDoList:newToDoList}
+    localStorage.setItem('toDoList',JSON.stringify(list)) 
+
+    return list;
+}
 
 export{
-    saveData,updateData
+    saveData,updateData,deleteToDo
 }

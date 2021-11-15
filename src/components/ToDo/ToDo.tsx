@@ -1,4 +1,7 @@
 
+import { useContext } from "react"
+import { AppContext } from "../../context/AppContext"
+import { ActionKind } from "../../interfaces/ActionKind"
 import { ToDoInterface } from "../../interfaces/ToDoInterface"
 import "./to_do.scss"
 interface Props {
@@ -7,7 +10,10 @@ interface Props {
 }
 
 const ToDo = (props: Props) => {
-   
+    const {dispatch} = useContext(AppContext)   
+    const deleteToDo = ():void =>{
+        dispatch({type:ActionKind.DELETE_TODO, payload:{ id:props.todo.id }})
+    }
     return (
         <tr>
             <td>    
@@ -17,7 +23,8 @@ const ToDo = (props: Props) => {
                 {props.todo.name}
             </td>
             <td>    
-                <button className="button"> Ver detalles </button>
+                <button onClick={deleteToDo} className="button"> Eliminar </button>
+              
             </td>
            
         </tr>

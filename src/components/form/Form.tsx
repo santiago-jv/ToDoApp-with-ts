@@ -49,12 +49,6 @@ const Form = () => {
                     <label htmlFor="name">Tarea</label>
                     <input onChange={handleChangeInputs} id="name" type="text" name="name" className="form-control"/>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="description">Descripción de la tarea</label>
-                    <textarea onChange={handleChangeInputs} id="description" name="description" className="form-control">
-                        
-                    </textarea>
-                </div>
                 <div className="form-group done-control">
                     <label htmlFor="done">Está completada?</label>
                     <input onChange={handleChangeInputs} id="done" type="checkbox" name="done" className="form-control"/>

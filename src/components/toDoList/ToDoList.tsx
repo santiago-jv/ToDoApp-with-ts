@@ -16,6 +16,8 @@ const ToDoList = (props: Props) => {
             dispatch({type:ActionKind.UPDATE_TODO,payload:{toDo}})
         }
     }
+
+
     return (
         <div className="todo-list-container">
             {state.toDoList.length > 0  ? 
@@ -27,10 +29,10 @@ const ToDoList = (props: Props) => {
                                 Completada
                             </td>
                             <td>
-                                Nombre de la tarea
+                                Tarea
                             </td>
                             <td>
-                                Detalles
+                                Opciones
                             </td>
                         </tr>
                     </thead>     
